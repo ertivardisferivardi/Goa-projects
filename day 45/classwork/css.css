@@ -1,0 +1,19 @@
+ .parent{ 
+    align-content: center;
+    border: 5px solid black;
+    width: 1000px;
+    height: 1000px;
+    background-color: rgb(10, 10, 10);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    color: black;
+    flex-direction: column;
+ }
+  .child{
+    width: 200px;
+    height: 200px;
+    border: 2px solid rgb(148, 52, 56);
+    background-color: rgb(236, 13, 13);
+  }
