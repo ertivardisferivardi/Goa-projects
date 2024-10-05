@@ -1,0 +1,37 @@
+body{ 
+    display: flex;
+    justify-content:space-evenly;
+    align-items:center;
+    padding-top: 300px;
+}
+div{
+    width: 200px;
+    height: 200px;
+    background-color: black;
+    border-radius: 50%;
+}
+.div1:active{
+    background-color: red;
+    border-radius: 0;
+    transform: rotate(45deg);
+}
+.div2:active{
+    background-color: red;
+    border-radius: 0;
+    transform: scale(1.5);
+}
+.div3:active{
+    background-color: red;
+    border-radius: 0;
+    transform: translate(20px ,20px);
+}
+.div4:active{
+    background-color: red;
+    border-radius: 0;
+    transform:skewX(45deg)
+}
+.div5:active{
+    background-color: red;
+    border-radius: 0;
+    transform: skewY(60deg);
+}

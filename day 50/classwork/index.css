@@ -1,0 +1,29 @@
+body {
+
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    padding-top: 20%;
+    
+}
+.parent{
+    position: relative;
+}
+img {
+    width: 100px;
+    
+}
+.child {
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0px;
+    right:0px;
+}
