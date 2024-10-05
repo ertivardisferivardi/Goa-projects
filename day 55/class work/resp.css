@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
+
+
+body{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    background-color: hsl(204, 43%, 93%);
+    margin-top:130px ;
+    
+}
+main{
+    width: 660px;
+    height: 450px;
+    display: grid;
+    grid-template-columns: 330px 330px;
+    
+    
+
+}
+section{
+    padding-left:15px;
+    padding-right:20px;
+    padding-top:15px;
+    font-family: Karla;
+}
+
+.section0{
+    background-color: white;
+    height: 215px;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.sec0h1{
+    color: rgb(24, 190, 190);
+    font-size: 26px;
+    font-weight: 600;
+    position: relative;
+    top:4px;
+    left:23px;
+}
+.sec0h3{
+    color: hsl(71, 73%, 54%);
+    font-size: 19 px;
+    position: relative;
+    left: 23px;
+    top:4px;
+    font-weight: 500;
+
+}
+.sec0p{
+    color: rgb(141, 140, 140);
+    position: relative;
+    left:23px;
+    top:7px
+
+}
+.sec0p1{
+    color: rgb(141, 140, 140);
+    position: relative;
+    left:23px;
+    top:2px;
+
+
+
+}
+.section1{
+    background-color:hsl(179, 62%, 43%) ;
+    height: 235px;
+    color: white;
+    border-bottom-left-radius: 10px;
+    
+}
+.sec1h3{
+    position: relative;
+    left:22px;
+    top:2px;
+    font-weight: 600;
+    font-size: 21px;
+
+}
+.div1{
+    position: relative;
+    left:21px;
+    bottom: 25px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap:12px;
+
+
+}
+.div1h2{
+    font-size: 35px;
+
+}
+.div1p{
+    color:  hsl(204, 43%, 93%) ;
+    font-weight: 300;
+    font-size: 17px;
+}
+.sec1p{
+    position: relative;
+    left:21px;
+    bottom: 62px;
+    font-weight: 400;
+
+
+}
+button{
+    height: 43px;
+    width: 250px;
+    background-color: hsl(71, 73%, 54%);
+    color:white;
+    border-radius: 5px;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    left: 21px;
+    bottom: 50px;
+    font-size: 17px;
+    box-shadow: 7px 7px 30px hsl(0, 0%, 53%) ;
+
+}
+.section2{
+    background-color:rgb(24, 190, 190) ;
+    height: 235px;
+    border-bottom-right-radius:10px ;
+    color: white;
+    
+    
+}
+.sec2h{
+    position: relative;
+    left: 22px;
+    font-size: 20px;
+    top: 2px;
+
+}
+button:active{
+    transform: scale(0.99);
+}
+@media screen and (max-width:376px){
+    main{
+        display: flex;
+        flex-direction: column;
+    }
+    .section0{
+        height: 270px;
+        padding-left: 4px;
+        padding-bottom: 5px;
+    }
+    .section1{
+        border-bottom-left-radius: 0px;
+        height: 230px;
+    }
+    .section2{
+        border-bottom-left-radius: 10px;
+        height: 230px;
+    }
+    button{
+        width: 285px;
+        height:49px ;
+    }
+    .sec0p{
+        position: relative;
+        top:6px
+    }
+    .sec0p1{
+        position: relative;
+        top: -7px;
+        
+    }
+}
