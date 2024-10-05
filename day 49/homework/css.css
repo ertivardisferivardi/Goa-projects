@@ -1,0 +1,52 @@
+body{
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+main{
+    background-color: rgb(199, 174, 174);
+    width: 100%;
+    height: 80px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    gap:5px;
+    padding: 20px;
+    background-image: url(download.png);
+    
+    
+}
+button{
+    background-color: black;
+    border:none;
+    border-radius: 45px;
+    width: 120px;
+    height: 60px;
+    color: white;
+    font-size: large;
+    position: relative;
+    right: 30px;
+}
+h2{
+
+    position: relative;
+    right: 550px;
+    color: white;
+    font-weight: 700;
+    font-size: 40px;
+    background-color: red;
+    
+}
+#ddddd{
+    background-color: aqua;
+    width:150px;
+    position: relative;
+    left:570px;
+}
+div{
+    width: 200px;
+    height: 200px;
+    background-color: red;
+    
+}

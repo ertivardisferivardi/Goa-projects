@@ -1,0 +1,44 @@
+main{
+    background-color: rgb(27, 26, 26);
+    width: 100%;
+    height: 80px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    gap:5px;
+}
+button{
+    background-color: black;
+    border:none;
+    border-radius: 45px;
+    width:100px;
+    height: 50px;
+    color: white;
+    font-size: large;
+}
+h2{
+
+    position: relative;
+    right: 550px;
+    color: white;
+    font-weight: 700;
+    font-size: 30px;
+    
+}
+#ddddd{
+    background-color: aqua;
+    width:150px;
+    position: relative;
+    left:570px;
+    
+
+}
+div{
+    background-color: blue;
+    color: red;
+    justify-content: flex-start;
+    position: fixed;
+}
+body{
+    height: 150vh;
+}
