@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input{
+            background-color: black;
+            color: white;
+            width: 400px;
+            height: 30px;
+            border-radius: 5px;
+            font-size: x-large;
+        }
+        label{
+            font-size: xx-large;
+            
+        }
+        #terms{
+            position: relative;
+            left:10px;
+            bottom: 30px;
+        }
+    </style>
+</head>
+<body>
+    <form style="display: flex;flex-direction:column;" id="myform">
+        <label for="name" >Name</label>
+        <input type="text" name="name" placeholder="Please enter your name">
+        <label for="email">Email</label>
+        <input type="email" name="email" placeholder="Please enter your email">
+        <label for="passw">Password</label>
+        <input type="password" name="passw" placeholder="Please enter your password">
+        <label for="terms">I am not robot</label>
+        <input type="checkbox" id="terms" name="terms">
+        <button type="button" id="btn">Submit</button>
+    </form>
+    <script src="style.js"></script>
+</body>
+</html>
+<!-- შექმენით საიტი სადაც გექნებათ სარეგისტრაციო ფორმა.
+ მომხარებელს უნდა შემოატანინოთ სახელი,
+  ემაილი, პაროლი და გამოუტანოთ checkbox-ი.
+   ფორმა არ დადასტურდეს იქამდე სანამ მომხარებელი
+არ მონიშნავს ჩექმბოქსს. შეამოწმეთ არის თუ არა ინფუთები
+ცარიელი. თუ კი გამოუტანეთ გამაფრთხილებელი მესიჯი
+და გათიშეთ ფუნქცია, ხოლო თუ მომხარებელმა ყველაფერი სწორად
+შეიყვანა გამოიტანეთ ინფუთების მნიშვნელობა კონსოლში -->
