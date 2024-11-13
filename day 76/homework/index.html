@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CSS Shapes</title>
+<style>
+.shape {
+  width: 100px;
+  height: 100px;
+  margin: 20px;
+  display: inline-block;
+}
+
+.square {
+  background-color: pink;
+}
+
+.circle {
+  background-color: orange;
+  border-radius: 50%;
+}
+
+.rectangle {
+  background-color: #2f8f83;
+  width: 150px;
+}
+
+.triangle {
+  width: 0;
+  height: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-bottom: 100px solid lightblue;
+}
+
+.pentagon {
+  position: relative;
+  width: 54px;
+  border-width: 0 27px 47px 27px;
+  border-style: solid;
+  border-color: transparent transparent lightgreen transparent;
+  border-bottom: 0;
+  top: -27px;
+}
+
+.pentagon:before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: -27px;
+  border-width: 27px 27px 0 27px;
+  border-style: solid;
+  border-color: lightgreen transparent transparent transparent;
+}
+
+.oval {
+  background-color: peachpuff;
+  width: 100px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.star {
+  position: relative;
+  display: inline-block;
+  width: 0px;
+  height: 0px;
+  border-right: 50px solid transparent;
+  border-bottom: 35px solid lightgray;
+  border-left: 50px solid transparent;
+  transform: rotate(35deg);
+}
+
+.star:before {
+  border-bottom: 35px solid lightgray;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  position: absolute;
+  height: 0;
+  width: 0;
+  top: -25px;
+  left: -30px;
+  display: block;
+  content: '';
+  transform: rotate(-35deg);
+}
+
+.star:after {
+  position: absolute;
+  display: block;
+  color: lightgray;
+  top: 0;
+  left: -50px;
+  width: 0;
+  height: 0;
+  border-right: 50px solid transparent;
+  border-bottom: 35px solid lightgray;
+  border-left: 50px solid transparent;
+  transform: rotate(-70deg);
+  content: '';
+}
+
+.crescent {
+  background-color: salmon;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  position: relative;
+}
+
+.crescent:before {
+  content: '';
+  display: block;
+  position: absolute;
+  background-color: white;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  top: 15px;
+  left: 15px;
+}
+
+.heart {
+  position: relative;
+  width: 100px;
+  height: 100px;
+}
+
+.heart:before,
+.heart:after {
+  content: "";
+  position: absolute;
+  top: 50px;
+  width: 50px;
+  height: 80px;
+  border-radius: 50px 50px 0 0;
+  background: red;
+}
+
+.heart:before {
+  left: 50px;
+  transform: rotate(-45deg);
+  transform-origin: 0 100%;
+}
+
+.heart:after {
+  left: 0;
+  transform: rotate(45deg);
+  transform-origin: 100% 100%;
+}
+</style>
+</head>
+<body>
+
+<div class="shape square"></div>
+<div class="shape circle"></div>
+<div class="shape rectangle"></div>
+<div class="shape triangle"></div>
+<div class="shape pentagon"></div>
+<div class="shape oval"></div>
+<div class="shape star"></div>
+<div class="shape crescent"></div>
+<div class="shape heart"></div>
+
+</body>
+</html>
+

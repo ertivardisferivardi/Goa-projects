@@ -1,0 +1,102 @@
+/* #div{
+    position: relative;
+    left: 60px;
+    width:90%;
+    height:100px;
+    background-color: rgb(40, 40, 40);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+    position:fixed;
+}
+#a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+}
+.a{
+    
+    color: white;
+    font-size:large;
+}
+#btn{
+
+    background-color: #007bff; 
+    color: white;
+    padding: 15px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+@media (max-width: 768px) {  
+    #btn {
+    padding: 10px 20px;
+    font-size: 16px;
+  }
+  #a{
+    font-size: 17px;
+    gap: 17px;
+}
+    #h1{
+        font-size: xx-large;
+    }
+    
+}
+@media (max-width: 635px) {  
+    #btn {
+    padding: 9px 18px;
+    font-size: 14px;
+  }
+  #a{
+    font-size: 15px;
+    gap: 13px;
+}
+    #h1{
+        font-size: x-large;
+    }
+    
+}
+@media (max-width: 530px) {  
+    #div{
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        height: 150px;
+    }
+
+    #btn {
+    padding: 7px 14px;
+    font-size: 15px;
+    position: relative;
+    bottom: 7px;
+  }
+  #a{
+    font-size: 25px;
+    gap: 35px;
+    position: relative;
+    bottom: 17px;
+}
+    #h1{
+        font-size: 35px;
+    }
+    
+} */
+#square{
+    width: 100px;
+    height: 100px;
+    background-color: red;
+   position: absolute;
+   top:0%;
+   left: 0%;
+   overflow: hidden;
+   animation:squareAnimation 10s linear infinite;
+
+}
+
+@keyframes squareAnimation {
+    
+}
