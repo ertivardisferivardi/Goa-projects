@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Button Hover Divs</title>
+<style>
+  .button-container {
+    margin: 20px;
+  }
+
+  .button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    
+  }
+
+  .hidden-div {
+    display: none;
+    margin-top: 10px;
+    font-size: 14px;
+    color: black;
+  }
+
+  .button:hover + .hidden-div {
+    display: block;
+    animation: fadeIn 1s forwards;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+</style>
+</head>
+<body>
+
+<div class="button-container">
+  <button class="button">Button 1</button>
+  <div class="hidden-div">Div 1</div>
+</div>
+
+<div class="button-container">
+  <button class="button">Button 2</button>
+  <div class="hidden-div">Div 2</div>
+</div>
+
+<div class="button-container">
+  <button class="button">Button 3</button>
+  <div class="hidden-div">Div 3</div>
+</div>
+
+</body>
+</html>
