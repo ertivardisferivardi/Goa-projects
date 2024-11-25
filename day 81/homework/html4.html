@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Resize</title>
+    <style>
+        #text {
+            font-size: 16px;
+            transition: font-size 2s;
+        }
+    </style>
+</head>
+<body>
+    <button id="resizeButton">Resize Text</button>
+    <p id="text">This is a text.</p>
+
+    <script>
+        const resizeButton = document.getElementById('resizeButton');
+        resizeButton.addEventListener('click', function() {
+            const text = document.getElementById('text');
+            if (text.style.fontSize === '16px') {
+                text.style.fontSize = '32px'; 
+            } else {
+                text.style.fontSize = '16px'; 
+            }
+        });
+    </script>
+</body>
+</html>

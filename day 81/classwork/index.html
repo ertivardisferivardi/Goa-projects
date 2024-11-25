@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+            background-color: red;
+            display: flex; 
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            width: 100vw;
+            height: 100vh;
+        }
+        #div {
+            background-color: black;
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            bottom: 0; /* Start at the bottom */
+        }
+        button {
+            position: absolute;
+            bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="div"></div>
+    <button id="startButton">Start Animation</button>
+
+    <script>
+        const div = document.getElementById('div');
+        const startButton = document.getElementById('startButton');
+        let interval; // To store the interval ID
+
+        function startAnimation() {
+            clearInterval(interval); // Clear any existing intervals
+            let position = 0; // Reset position to start
+            let direction = 'up'; // Reset direction to 'up'
+            interval = setInterval(function() {
+                const maxHeight = 100; // Maximum height (top of the screen in percentage)
+
+                if (direction === 'up') {
+                    position += 1; // Move up
+                    if (position >= maxHeight) { // Touch the top edge
+                        direction = 'down'; // Immediately change direction to down
+                    }
+                } else if (direction === 'down') {
+                    position -= 1; // Move down
+                    if (position <= 0) {
+                        clearInterval(interval); // Stop the interval when reaching the bottom
+                    }
+                }
+                div.style.bottom = `${position}%`; // Move the element using bottom property with percentage
+            }, 10);
+        }
+
+        startButton.addEventListener('click', startAnimation);
+    </script>
+</body>
+</html>

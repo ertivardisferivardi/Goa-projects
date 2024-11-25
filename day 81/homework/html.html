@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fade In/Fade Out Animation</title>
+    <style>
+        #fadeElement {
+            width: 100px;
+            height: 100px;
+            background-color: black;
+            opacity: 0;
+            transition: opacity 2s;
+        }
+    </style>
+</head>
+<body>
+    <button id="fadeButton">Fade In/Out</button>
+    <div id="fadeElement"></div>
+
+    <script>
+        document.getElementById('fadeButton').addEventListener('click', function() {
+            const element = document.getElementById('fadeElement');
+            element.style.opacity = element.style.opacity == 0 ? 1 : 0;
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Store</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #0080ff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0;
+            margin-top: 100px;
+            padding: 20px;
+        }
+        h1 {
+            text-shadow: 2px 2px 5px rgb(0, 0, 0);
+        }
+        #product-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .card {
+            background-color: #000000;
+            border: 1px solid #000000;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(255, 0, 0, 0.1);
+            padding: 20px;
+            width: 200px;
+            text-align: center;
+        }
+        .card img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px 8px 0 0;
+        }
+        .card h3 {
+            margin: 10px 0;
+        }
+        .card p {
+            color: #ffffff;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Online Store</h1>
+    <div id="product-container"></div>
+    <script>
+        const products = [
+            {
+                name: 'Creatine',
+                price: '$25.00',
+                description: 'Boosts energy, enhances muscle growth, and improves performance.',
+                imageUrl: 'https://avatars.mds.yandex.net/i?id=eeda4f4026e0b27d9ab12f48c3e30c3d_l-5367291-images-thumbs&n=13'
+            },
+            {
+                name: 'Protein',
+                price: '$30.00',
+                description: 'Essential for muscle repair, growth, and overall body function.',
+                imageUrl: 'https://avatars.mds.yandex.net/i?id=9731c0ba4d822f88fcd675d0691cb9e6964f2eef-6380060-images-thumbs&n=13'
+            },
+            {
+                name: 'Gainer',
+                price: '$35.00',
+                description: 'Helps increase muscle mass and body weight with proteins, carbs, and fats.',
+                imageUrl: 'https://avatars.mds.yandex.net/i?id=25597c5fc682f645274986d0f67c1a4980769d18-8497449-images-thumbs&n=13'
+            }
+        ];
+
+        const productContainer = document.getElementById('product-container');
+
+        products.forEach(product => {
+            const card = document.createElement('div');
+            card.className = 'card';
+
+            const img = document.createElement('img');
+            img.src = product.imageUrl;
+            card.appendChild(img);
+
+            const h3 = document.createElement('h3');
+            h3.textContent = product.name;
+            card.appendChild(h3);
+
+            const pPrice = document.createElement('p');
+            pPrice.textContent = product.price;
+            card.appendChild(pPrice);
+
+            const pDescription = document.createElement('p');
+            pDescription.textContent = product.description;
+            card.appendChild(pDescription);
+
+            productContainer.appendChild(card);
+        });
+    </script>
+</body>
+</html>
+
+
+    

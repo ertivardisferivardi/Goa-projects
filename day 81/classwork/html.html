@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Move Box</title>
+    <style>
+        #div {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+    </style>
+</head>
+<body style="background-color: black;">
+    <div id="div"></div>
+
+    <script>
+        const divi = document.getElementById("div");
+        let positionX = 0;
+        let positionY = 0;
+        let direction = "right"; 
+
+        function moveBox() {
+            const windowWidth = window.innerWidth;
+            const windowHeight = window.innerHeight;
+
+            if (direction === "right") {
+                positionX += 1;
+                if (positionX + divi.offsetWidth >= windowWidth) {
+                    direction = "down";
+                }
+            } else if (direction === "down") {
+                positionY += 1;
+                if (positionY + divi.offsetHeight >= windowHeight) {
+                    direction = "left";
+                }
+            } else if (direction === "left") {
+                positionX -= 1;
+                if (positionX <= 0) {
+                    direction = "up";
+                }
+            } else if (direction === "up") {
+                positionY -= 1;
+                if (positionY <= 0) {
+                    direction = "right";
+                }
+            }
+
+            divi.style.left = positionX + "px";
+            divi.style.top = positionY + "px";
+        }
+
+        setInterval(moveBox, 1);
+    </script>
+</body>
+</html>
